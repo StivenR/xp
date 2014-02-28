@@ -3,7 +3,7 @@
 	include 'function.php';
 	$nb = nombreMots($str);
 	if($nb <= 1)
-		echo $nb . 'mot';
+		echo $nb . ' mot';
 	else
-		echo $nb . 'mots';
+		echo $nb . ' mots';
 ?>
