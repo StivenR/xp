@@ -2,12 +2,19 @@
 function nombreMotsOblige($phrase,$nb)
 {
 	$nombre = substr_count($phrase,' ')+1;
-	echo 'La chaine comporte '.$nombre.' mots';
+	if($nombre < $nb)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
 }
 
 function nombreMots($phrase)
 {
 	$nombre = substr_count($phrase,' ')+1;
-	echo 'La chaine comporte '.$nombre.' mots';
+	return $nombre;
 }
 ?>
