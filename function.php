@@ -1,7 +1,7 @@
 <?php
 function nombreMotsOblige($phrase,$nb)
 {
-	$nombre = substr_count($phrase,' ')+1;
+	$nombre = str_word_count($phrase);
 	if($nombre < $nb)
 	{
 		return false;
@@ -14,7 +14,7 @@ function nombreMotsOblige($phrase,$nb)
 
 function nombreMots($phrase)
 {
-	$nombre = substr_count($phrase,' ')+1;
+	$nombre = str_word_count($phrase);
 	return $nombre;
 }
 ?>
