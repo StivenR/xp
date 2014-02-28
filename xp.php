@@ -36,7 +36,7 @@ $('#form').submit(function() {
 	</fieldset>
 	<fieldset><legend>Test 2 : </legend>
 		<form id="form" action="formValidation.php" method="POST">
-			<input type="textarea" name="text" placeholder="Texte à vérifier"/>
+			<textarea name="text"  form="form" placeholder="Texte à vérifier"></textarea><br />
 			<input type="submit" value="Valider">
 		</form>
 		<span id="response"></span>
