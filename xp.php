@@ -7,7 +7,7 @@
 	function tests(){
 		$str = "Salut les gens";
 		$nb = 3;
-		var_dump(nombreMots($str,$nb));
+		nombreMots($str,$nb);
 	}
 ?>
 </head>
@@ -18,10 +18,13 @@
 		tests();
 		?>
 	</fieldset>
-	<!-- <form action="tests(this)">
-		<input type="textarea" name="text" placeholder="Texte à vérifier"/>
-		<input type="text" name="number" placeholder="Nombres de mots attendus"/>
-		<input type="submit" value="Valider">
-	</form> -->
+	<fieldset><legend>Test 2 : </legend>
+		<form action="tests(this)">
+			<input type="textarea" name="text" placeholder="Texte à vérifier"/>
+			<input type="text" name="number" placeholder="Nombres de mots attendus"/>
+			<input type="submit" value="Valider">
+		</form>
+		<span class="response"></span>
+	</fieldset>
 </body>
 </html>
