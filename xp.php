@@ -8,9 +8,9 @@
 		$str = "Salut les gens de l'espace";
 		$nb = 6;
 		if(nombreMotsOblige($str,$nb))
-			return "Vrai";
+			return "Réussi";
 		else
-			return "Faux";
+			return "Echec";
 
 	}
 ?>
@@ -31,7 +31,7 @@ $('#form').submit(function() {
 	<fieldset><legend>Test 1 : </legend> 
 		Paramètres : Salut les gens de l'espace, 6 <br />
 		<?php 
-		tests();
+		echo tests();
 		?>
 	</fieldset>
 	<fieldset><legend>Test 2 : </legend>
