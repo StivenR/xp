@@ -5,30 +5,31 @@
 <head>
 <?php
 	function tests(){
-		$str = "Salut les gens";
-		$nb = 3;
-		nombreMotsOblige($str,$nb);
+		$str = "Salut les gens de l'espace";
+		$nb = 6;
+		if(nombreMotsOblige($str,$nb))
+			return "Vrai";
+		else
+			return "Faux";
+
 	}
 ?>
-<script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
 $(document).ready( function() {
-$('#form').submit(function() { // catch the form's submit event
-	    $.ajax({ // create an AJAX call...
-	        data: $(this).serialize(), // get the form data
-	        type: $(this).attr('method'), // GET or POST
-	        url: $(this).attr('action'), // the file to call
-	        success: function(response) { // on success..
-	            $('#response').html(response); // update the SPAN
-	        }
-	    });
-	    return false; // cancel original event to prevent form submitting
+$('#form').submit(function() {
+	    $.post("formValidation.php",$("#form").serialize(),function(texte){
+                $("#response").html(texte);
+            });
+            return false;
 	});
 });
 </script>
 </head>
 <body>
 	<fieldset><legend>Test 1 : </legend> 
-		Paramètres : Salut les gens, 3 <br />
+		Paramètres : Salut les gens de l'espace, 6 <br />
 		<?php 
 		tests();
 		?>
